@@ -1,0 +1,28 @@
+{% extends "home.html" %}
+{%block title%}Add A New Movie{%endblock%}
+{% block home %}
+<a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+{% endblock %}
+{%block gdiv%}
+{%endblock%}
+<body>
+  {% block container %}
+  <div id="newmovie">
+  <h2>Add A New {{gname}} Movie</h2> <br>
+  <form class="" action="{{url_for('NewMoviePage', genreid=id)}}" method="post">
+    <p><label for="name">Movie Name</label></p>
+    <p><input type="text" name="name" size="30" required></p><br>
+    <p><label for="release_date">Release Date (Year)</label></p>
+    <p><input type="text" name="release_date" size="10" required></p><br>
+    <p><label for="synopsis">Synopsis</label></p>
+    <p><textarea name="synopsis" rows="10" cols="30" required></textarea></p><br>
+    <p><label for="poster">Movie Poster *enter a url*</label></p>
+    <p><input type="url" placeholder="https://example.com" pattern="https://.*" size="30" name="poster" size="30" required></p><br>
+    <input type='submit' value='Create' style="font-size: 20px; text-decoration: underline;">
+    <button type="button" name="button"><a href="{{url_for('GenrePage', genreid=id)}}" style="font-size: 20px; text-decoration: underline;">Cancel</a></button>
+  </form>
+</div>
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{% extends "home.html" %}
+{%block title%} Edit {{movie.name}}{%endblock%}
+{% block home %}
+<a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+{% endblock %}
+{%block gdiv%}
+<h3 class="edith" style="font-family: sans-serif;">Edit "{{movie.name}}"</h3>
+{%endblock%}
+{% block container %}
+<div id="editform">
+  <form action="{{url_for('EditMoviePage', genreid=movie.genre_id, movieid=movie.id)}}" method="post">
+    <dd>
+    <dt>Movie Name:
+      <br><input type="text" name="name" placeholder="{{movie.name}}">
+    </dt>
+    <br>
+    <dt>Release Date:
+      <br><input type="text" name="release_date" placeholder="{{movie.release_date}}">
+    </dt>
+    <br>
+    <dt>Synopsis:
+      <br><textarea name="synopsis" rows="8" cols="80" placeholder="{{movie.synopsis}}"></textarea>
+    </dt>
+    <br>
+    <dt>Poster "URL":
+      <br><input type="url" name="poster" placeholder="{{movie.poster}}">
+    </dt>
+    <br>
+    <br>
+    <input type='submit' value='Edit' style="font-size: 20px; text-decoration: underline;">
+    <a href="{{url_for('GenrePage', genreid=genreid)}}" style="font-size: 20px; text-decoration: underline;">Cancel</a>
+    </dd>
+  </form>
+</div>
+{% endblock %}

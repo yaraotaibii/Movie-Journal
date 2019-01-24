@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block head %}
+  <title>{% block title %}Movie Journal{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="{{url_for('static', filename='style_main.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+  <script src="https://use.fontawesome.com/452826394c.js"></script>
+  <script src="https://use.fontawesome.com/452826394c.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+  {% endblock %}
+</head>
+
+<body>
+  <span>
+    <div class="header">
+      <div id="home">
+        {% block home %}
+        <a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+        {%endblock%}
+      </div>
+
+      <div class="logo">
+        <a href="{{url_for('HomePage')}}"><img src="{{url_for('static', filename='logo.png')}}" height="60"></a>
+      </div>
+
+      <div class="login">
+        {%block login%}
+        <a href="{{url_for('showLogin')}}">Log In</a>
+        {%endblock%}
+      </div>
+
+    </div>
+    <div id="gdiv">
+      |{%for i in genreslist%}
+      <a class="gnames" href="{{url_for('GenrePage', genreid=i.id, movielist=movielist, gname=genreslist.name)}}"> {{i.name}} </a> |
+      {%endfor%}
+    </div>
+  </span>
+  <div id="container">
+    <!-- child template -->
+    {% block container %}
+    <div class="wel_container">
+      <h2 id="welcome">WELCOME</h2>
+      <p id="message" style="line-height: 25px;">
+        This is my project for Udacity's Fullstack Developer nanodegree program.
+        I've enjoyed learning and making it so much. <br>I'm so glad I chose to enroll. There's
+        still so much I want to add and modify but for the sake of graduating on
+        time, I decided to stop here and submit it.
+        Thank you for this great learning experience.
+        For my fellow classmates and lovely session leader, I had a wonderful time with you in each session,
+        I'm so proud to have met such wonderful and helpful people. I wish you the best of luck
+        and want you to know that even though this course is over, You can still find me in the internet universe,
+        whether you want to chat, be friends, discuss programming news or just send me a funny meme.
+        If you'd like to connect with me you can find me here... <br>
+        <i class="fa fa-lg fa-twitter"></i> <a href="https://twitter.com/YaraOtaibii" style="text-decoration: underline; transform: translateX(15px);">@YaraOtaibii</a>
+        <br>Enjoy and let me know what you think.
+        <p style="text-align: center;">
+          <br><br>All the love,
+          <p style="font-size: 20px; font-family: 'Homemade Apple', cursive; text-align: center;">Yara Alotaibi</p>
+        </p>
+      </p>
+    </div>
+    {% endblock %}
+  </div>
+  <div id="latest" style="display:block;">
+    {%block latest%}
+    <a href="#" onclick="hide()" class="close"> X Close</a>
+    <p>Recently added movies...</p>
+    {%for i in latestmovies%}
+    <a href="{{url_for('MoviePage', genreid=i.genre_id, movieid=i.id)}}">
+      <img src="{{i.poster}}" alt="poster" height="140">
+    </a>
+    {%endfor%}
+    {%endblock%}
+  </div>
+  <footer>Made With <i class="fa fa-lg fa-heart-o" style="transform: scale(0.9,0.9);"></i> By Yara Alotaibi</footer>
+  <script>
+    function hide() {
+      var x = document.getElementById("latest");
+      if (x.style.display === "block") {
+        x.style.display = "none"
+      } else {
+        x.style.display = "block"
+      }
+    }
+
+    function userlogin() {
+
+    }
+  </script>
+</body>
+
+</html>

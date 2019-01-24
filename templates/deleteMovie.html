@@ -1,0 +1,16 @@
+{% extends "home.html" %}
+{%block title%} Delete {{movie.name}}{%endblock%}
+{% block home %}
+<a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+{% endblock %}
+{%block gdiv%}
+{%endblock%}
+{% block container %}
+<div style="width: 600px;margin-top: 200px;margin-right: auto;margin-left: auto; text-align:center; padding:30px;">
+  <h2 style="font-family: sans-serif;">Are you sure you want to delete {{movie.name}} ?</h2>
+  <form class="" action="{{url_for('DeleteMoviePage', genreid=movie.genre_id, movieid=movie.id)}}" method="post" style="transform:translateY(20px);">
+    <input type="submit" value="Delete" style="font-size: 20px; text-decoration: underline;">
+    <button type="button" name="button"><a href="{{url_for('GenrePage', genreid=genreid)}}" style="font-size: 20px; text-decoration: underline;">Cancel</a></button>
+  </form>
+</div>
+{% endblock %}

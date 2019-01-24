@@ -1,0 +1,28 @@
+{% extends "home(public).html" %}
+{%block head%}
+<title>Movie Journal - {{name}} </title>
+<link rel="stylesheet" href="{{url_for('static', filename='style_main.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+<script src="https://use.fontawesome.com/452826394c.js"></script>
+<script src="https://use.fontawesome.com/452826394c.js"></script>
+{%endblock%}
+{% block home %}
+<a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+{% endblock %}
+{%block login%}
+<a href="{{url_for('showLogin')}}">Log In</a>
+{%endblock%}
+{% block container %}
+
+<a href="{{url_for('GenrePage', genreid=genre.id)}}"><i class="fa fa-2x fa-arrow-left" id="arrow"></i></a>
+<div id="movie_container">
+  <img src="{{poster}}" alt="{{name}} movie poster" height="400">
+  <div class="info">
+    <p><b>Movie Name:</b> {{name}}</p>
+    <p><b>Genre:</b> {{gname}}</p>
+    <p><b>Release Date:</b> {{date}}</p>
+    <p><b>Synopsis:</b> {{synopsis}}</p>
+    <p><b>Added By:</b> {{username}} &hearts;</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,864 @@
+* {
+  overflow: auto;
+  margin: 0px;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+}
+
+.login {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 30px;
+  margin-left: 93%;
+}
+
+.login a {
+  color: white;
+  font-style: normal;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border-color: white;
+  border-bottom: solid;
+}
+
+.logo {
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  filter: invert(100%);
+}
+
+#home {
+  transform: scale(0.8, 0.8);
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 55px;
+  color: white;
+  text-decoration: none;
+}
+
+#home a {
+  color: white;
+}
+
+.gnames {
+  font-size: 20px;
+  font-style: normal;
+  font-family: 'Limelight';
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+#gdiv {
+  position: relative;
+  width: 1000px;
+  top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  z-index: 8;
+}
+
+/* child template */
+#container {
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+#container a {
+  color: black;
+  font-style: normal;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+.wel_container {
+  align-items: center;
+  height: auto;
+  width: 840px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 21;
+}
+
+#welcome {
+  margin-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 6;
+}
+
+#message::first-letter {
+  font-size: 150%;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: 170px 170px 170px 170px;
+  grid-template-rows: auto;
+  justify-items: center;
+  width: 680px;
+  margin-top: 150px;
+  margin-left: 25%;
+  margin-right: auto;
+  overflow: auto;
+  z-index: 4;
+}
+
+#addmovie {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 42%;
+  font-size: 15px;
+  font-weight: 700;
+  border-color: black;
+  border-bottom: solid;
+  z-index: 5;
+}
+
+.movie {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+
+.moviename {
+  width: 172px;
+  text-align: center;
+  overflow: auto;
+}
+
+.close {
+  display: inline-block;
+  position: fixed;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 26.4%;
+}
+
+#latest {
+  position: fixed;
+  height: 160px;
+  width: 30%;
+  padding: 7px;
+  left: 0;
+  bottom: 0;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-style: oblique;
+  font-family: sans-serif;
+  text-align: left;
+  background-color: #FFFFFF;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  z-index: 9;
+}
+
+#latest .close {
+  color: black;
+  text-decoration: none;
+}
+
+/*-------Movie Page------*/
+#arrow {
+  color: black;
+  transform: translateY(80px);
+  margin-left: 200px;
+}
+
+#movie_container {
+  width: 800px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px;
+  font-style: normal;
+  font-family: sans-serif;
+  line-height: 32px;
+  border: 2px solid;
+}
+
+#edit_del {
+  transform: translate(680px, -570px);
+}
+
+/*-------Sign in Page------*/
+.signin_contain {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 3px solid;
+  border-radius: 15px;
+}
+
+#sign {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#signinButton {
+  transform: translate(0px, 20px);
+  width: 112px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#result {
+  width: 600px;
+  margin-top: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*-------Edit Movie Page------*/
+#editform {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+footer {
+  height: 18px;
+  margin-top: 150px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Phone Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    * {
+      overflow: none;
+      margin: 0px;
+    }
+
+   .header {
+      width: 100%;
+    }
+
+    #home {
+      display: inline-block;
+      transform: scale(0.8, 0.8) translateX(-15px);
+    }
+
+    .logo {
+      transform: scale(0.8,0.8);
+      width: 160px;
+      margin-left: auto;
+    }
+
+    #gdiv {
+      width: 86%;
+      text-align: center;
+      line-height: 30px;
+      margin-top: -10px;
+      background-color: white;
+
+    }
+
+    #home {
+      margin-left: 20px;
+    }
+
+    .login {
+      width: 60px;
+      margin-left: 80%;
+    }
+
+    #container {
+      display: flex;
+      flex: wrap;
+      width: 100%;
+      height: 100%;
+    }
+
+    .wel_container {
+      overflow: none;
+      margin-top: -40px;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .movies {
+      grid-template-columns: 170px 170px;
+      margin-top: 65px;
+      margin-left: 5%;
+      margin-right: auto;
+      width: 400px;
+      height:auto;
+    }
+
+    #latest {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      height: 150px;
+      z-index: 30;
+    }
+
+    #latest .close {
+      transform: translateY(-2px);
+      margin-left: 82%;
+    }
+
+    .signin_contain {
+      width: 450px;
+      height: 130px;
+      transform: translate(105px, 30px);
+    }
+
+    #signinButton {
+      width: 116px;
+      transform: translateY(25px);
+    }
+
+    #arrow {
+      display: none;
+    }
+
+    #movie_container {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #movie_container img {
+      transform: translateX(25px);
+    }
+
+    #addmovie {
+      margin-top: 50px;
+      margin-left: 130px;
+    }
+
+    .movie {
+      margin-top: 20px;
+    }
+
+    #edit_del {
+      position: absolute;
+      transform: translate(250px, -10px)
+    }
+
+    #editform {
+      font-size: 20px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 300px;
+      height: 100%;
+      line-height: 25px;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    #editform textarea {
+      width: 150px;
+    }
+
+
+    #newmovie {
+      margin-top: 30px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+
+
+
+}
+
+/* Phone Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    * {
+      overflow: none;
+      margin: 0px;
+    }
+
+    .header {
+      width: 100%;
+    }
+
+    .logo {
+      width: 160px;
+      margin-left: auto;
+    }
+
+    .login {
+      width: 60px;
+      margin-left: 85%;
+    }
+
+    #gdiv {
+      width: 80%;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    #container {
+      display: flex;
+      flex: wrap;
+      width: 100%;
+      height: 100%;
+    }
+
+    .wel_container {
+      overflow: none;
+      margin-top: -40px;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    #arrow {
+      display: none;
+    }
+
+    .signin_contain {
+      overflow: none;
+      width: 450px;
+      height: 120px;
+      transform: translate(180px, 0px);
+    }
+
+    #signinButton {
+      width: 116px;
+      transform: translateY(25px);
+    }
+
+    #result {
+      margin-top: 90px;
+    }
+
+    #addmovie {
+      margin-top: 55px;
+    }
+
+    .movies {
+      grid-template-columns: 170px 170px 170px;
+      margin-top: 100px;
+      margin-left: 12%;
+      margin-right: auto;
+      width: 100%;
+      height:auto;
+    }
+
+    #latest {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      height: 150px;
+      z-index: 30;
+    }
+
+    #latest .close {
+      transform: translateY(-2px);
+      margin-left: 88%;
+    }
+
+    #movie_container {
+      overflow: hidden;
+      width: auto;
+      height: auto;
+    }
+
+    #movie_container img {
+      float: left
+    }
+
+    #movie_container p {
+      margin-left: 20px;
+    }
+
+    #edit_del {
+      overflow: none;
+      transform: translate(250px, 80px)
+    }
+
+
+    #editform {
+      font-size: 20px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 200px;
+      height: 100%;
+      line-height: 25px;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    #editform textarea {
+      width: 190px;
+    }
+
+    #newmovie {
+      margin-top: 30px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+
+
+}
+
+/* Tablet Portrait*/
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    * {
+      overflow: none;
+      margin: 0px;
+    }
+
+    .logo {
+      width: 160px;
+      margin-left: auto;
+    }
+
+    .login {
+      width: 60px;
+      margin-left: 86%;
+    }
+
+    #gdiv {
+      width: 100%;
+      text-align: center;
+
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wel_container {
+      overflow: none;
+      width: auto;
+      height: 100%;
+      text-align: left;
+      padding-left:  20px;
+      padding-right: 20px;
+    }
+
+    #latest {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      height: 150px;
+      z-index: 30;
+    }
+
+    #latest .close {
+      transform: translateY(-2px);
+      margin-left: 88%;
+    }
+
+    .movies {
+      grid-template-columns: 170px 170px 170px 170px;
+      margin-top: 100px;
+      margin-left: 30px;
+      width: auto;
+      height: 600px;
+    }
+
+    #arrow {
+      display: none;
+    }
+
+    #movie_container {
+      margin-top: 95px;
+      width: auto;
+      height: auto;
+    }
+
+    #movie_container img {
+      float: left
+    }
+
+    #movie_container p {
+      margin-left: 25px;
+    }
+
+    .signin_contain {
+      margin-top: 180px;
+      overflow: none;
+      width: 400px;
+      height: 120px;
+    }
+
+    #signinButton {
+      width: 116px;
+      transform: translateY(35px);
+    }
+
+    #result {
+      margin-top: 200px;
+    }
+
+    #addmovie {
+      margin-top: 60px;
+    }
+
+    #edit_del {
+      position: absolute;
+      overflow: none;
+      transform: translate(600px, 120px)
+    }
+
+    #editform {
+      font-size: 25px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 300px;
+      height: 100%;
+      line-height: 35px;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    #editform textarea {
+      overflow: none;
+      width: 200px;
+      height: auto;
+    }
+
+    .edith {
+      font-size: 26px;
+    }
+
+
+    #newmovie {
+      margin-top: 30px;
+      font-family: sans-serif;
+      font-size: 25px;
+      text-align: center;
+      width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+
+
+
+}
+
+
+/* Tablet Landscape*/
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    * {
+      overflow: none;
+      margin: 0px;
+    }
+
+    .logo {
+      width: 160px;
+      margin-left: auto;
+    }
+
+    .login {
+      width: 60px;
+      margin-left: 86%;
+    }
+
+    #gdiv {
+      width: 100%;
+      text-align: center;
+
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wel_container {
+      overflow: none;
+      width: auto;
+      height: 100%;
+      text-align: left;
+      padding-left:  20px;
+      padding-right: 20px;
+    }
+
+    #latest {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      height: 150px;
+      z-index: 30;
+    }
+
+    #latest .close {
+      transform: translateY(-2px);
+      margin-left: 88%;
+    }
+
+    .movies {
+      grid-template-columns: 170px 170px 170px 170px 170px 170px;
+      margin-top: 100px;
+      margin-left: 0;
+      width: auto;
+      height: 600px;
+    }
+
+    #arrow {
+      display: none;
+    }
+
+    #movie_container {
+      margin-top: 95px;
+      width: auto;
+      height: auto;
+    }
+
+    #movie_container img {
+      float: left
+    }
+
+    #movie_container p {
+      margin-left: 25px;
+    }
+
+    .signin_contain {
+      margin-top: 160px;
+      overflow: none;
+      width: 400px;
+      height: 90px;
+    }
+
+    #signinButton {
+      width: 116px;
+      transform: translateY(35px);
+    }
+
+    #result {
+      margin-top: 200px;
+    }
+
+    #addmovie {
+      margin-top: 60px;
+      margin-left: 45%;
+    }
+
+    #edit_del {
+      position: absolute;
+      overflow: none;
+      transform: translate(600px, 120px)
+    }
+
+    #editform {
+      font-size: 25px;
+      font-family: sans-serif;
+      text-align: center;
+      width: 300px;
+      height: 100%;
+      line-height: 35px;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    #editform textarea {
+      overflow: none;
+      width: 200px;
+      height: auto;
+    }
+
+    .edith {
+      font-size: 26px;
+    }
+
+
+    #newmovie {
+      margin-top: 30px;
+      font-family: sans-serif;
+      font-size: 25px;
+      text-align: center;
+      width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fbfbfb;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+
+
+
+}

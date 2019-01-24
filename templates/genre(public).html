@@ -1,0 +1,19 @@
+{% extends "home(public).html" %}
+{% block title %}Movie Journal - {{gname}}{% endblock %}
+{% block home %}
+<a href="{{url_for('HomePage')}}"><i class="fa fa-3x fa-home"></i></a>
+{% endblock %}
+{% block container %}
+<div class="movies">
+  {%for i in movielist%}
+  <a href="{{url_for('MoviePage', genreid=genres.id, movieid=i.id)}}">
+    <div class="movie">
+      <img src="{{i.poster}}" alt="movie poster" height="230">
+    </div>
+    <div class="moviename">
+      {{i.name}}
+    </div>
+  </a>
+  {%endfor%}
+</div>
+{% endblock %}
